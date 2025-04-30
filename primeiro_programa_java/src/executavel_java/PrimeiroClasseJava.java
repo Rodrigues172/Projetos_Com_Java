@@ -8,6 +8,6 @@ public class PrimeiroClasseJava {
 		
 		/*se fosse cout no c++*/
 		System.out.println("Meu primeiro Programa em java no curso java web!");
-		System.out.println("Java e ");
+		System.out.println("hellou word ");
 	}
 }

@@ -10,6 +10,6 @@ public class PrimeiroClasseJava {
 		int nota4 = 30;
 			
 		System.out.println("A Soma dos numeros das natas sao : " + (nota1 + nota2 + nota3 + nota4 ));
-		System.out.println("A Medias dos das notas sao : " + ((nota1 + nota2 + nota3) / 4));
+		System.out.println("A Medias dos das notas sao : " + ((nota1 + nota2 + nota3 + nota4) / 4));
 	}
 }

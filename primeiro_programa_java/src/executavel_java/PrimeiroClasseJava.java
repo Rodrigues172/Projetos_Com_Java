@@ -1,30 +1,22 @@
 package executavel_java;
-import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 public class PrimeiroClasseJava {	
 	
 	/*Main e um metodo auto excutavel*/
 	public static void main(String[] args) {
 		
-		int nota1 = 70;
-		int nota2 = 80;
-		int nota3 = 20;
-		int nota4 = 30;
-			
-		System.out.println("A Soma dos numeros das natas sao : " + (nota1 + nota2 + nota3 + nota4 ));
-		System.out.println("A Medias dos das notas sao : " + ((nota1 + nota2 + nota3 + nota4) / 4));
+		String carros = JOptionPane.showInputDialog("Imforme a quantidade de carros?");
+		String pessoas = JOptionPane.showInputDialog("Imforme a quantidade de carros?");
 		
-		Scanner sc = new Scanner(System.in);
+		double carroNumero = Double.parseDouble(carros);
+		double pessoasNumero = Double.parseDouble(pessoas);
 		
-		System.out.println("Digite seu Nome: ");
-		String nome = sc.nextLine();
+		int divisao = (int) (carroNumero / pessoasNumero); 
 		
-		System.err.println("Digite a sua idade: ");
-		int idade = sc.nextInt();
+		double resto = carroNumero % pessoasNumero;
 		
-	    System.out.println("Ola " + nome + ", Voce tem " + idade + " anos");
-		
-		
-		
+		JOptionPane.showMessageDialog(null, "Divisao para pessoas deu " + divisao + " carros e sobrou " + resto + " Carros");
 	}
 }

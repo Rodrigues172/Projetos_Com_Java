@@ -1,35 +1,43 @@
 package executavel_java;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
+
+import cursojava.classes.aluno;
+import cursojava.classes.disciplina;
 
 public class PrimeiroClasseJava {
 
 	/* Main e um metodo auto excutavel */
 	public static void main(String[] args) {
 
-		String nota1 = JOptionPane.showInputDialog("Informe a nota 1");
-		String nota2 = JOptionPane.showInputDialog("Informe a nota 2");
-		String nota3 = JOptionPane.showInputDialog("Informe a nota 3");
-		String nota4 = JOptionPane.showInputDialog("Informe a nota 4");
+		aluno aluno1 = new aluno();
+		aluno1.setNume("Davi");
+		aluno1.setNumeroCpf("50314842845");
 
-		double dNota1 = Double.parseDouble(nota1);
-		double dNota2 = Double.parseDouble(nota2);
-		double dNota3 = Double.parseDouble(nota3);
-		double dNota4 = Double.parseDouble(nota4);
+		for (int i = 0; i < 4; i++) {
+			String nomeDisciplina = JOptionPane.showInputDialog("Nome da Disciplina " + i + ": ");
+			String notaDisciplina = JOptionPane.showInputDialog("Qual e Valor da Nota " + i + ": ");
+			disciplina Disciplina = new disciplina();
+			Disciplina.setDisciplina(nomeDisciplina);
+			Disciplina.setNota(Double.valueOf(notaDisciplina));
 
-		double media = ((dNota1 + dNota2 + dNota3 + dNota4) / 4);
+			aluno1.getDisciplinas().add(Disciplina);
 
-		if (media >= 50) {
-			if (media >= 90) {
-				JOptionPane.showMessageDialog(null, "Parabens voce foi aprovado com acima de media: " + media);
-			} else if (media >= 70) {
-				JOptionPane.showMessageDialog(null, "Parabens voce foi aprovado com a media: " + media);
-			} else {
-				JOptionPane.showMessageDialog(null, "Ha nao voce esta de recuperacao com a media: " + media);
-			}
-		} else {
-			JOptionPane.showMessageDialog(null, "Voce foi reprovado com media abaixo de 50 sua media foi: " + media);
 		}
 
+		int escolha = JOptionPane.showConfirmDialog(null, "Deseja Excluir alguma disciplina?");
+		
+		if (escolha == 0) {
+			String disciplinaRemover = JOptionPane.showInputDialog("Qual a Disciplina 1, 2, 3, ou 4?");
+			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
+		} else {
+
+		}
+		
+		System.out.println(aluno1.getMetiaNota());
+
 	}
+
 }

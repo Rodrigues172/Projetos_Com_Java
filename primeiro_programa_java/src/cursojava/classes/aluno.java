@@ -22,28 +22,35 @@ public class aluno {
 	String nomeEscola;
 	String serieMatriculado;
 	double MetiaNota;
-	
+
+	public String getDisciplinas1() {
+
+		for (disciplina disciplina : disciplinas) {
+			System.out.println(disciplina.getDisciplina);
+		}
+	  return
+	}
 
 	public double getMetiaNota() {
-		
+
 		double somanotas = 0.0;
-		
-		for (disciplina disciplina:disciplinas){
+
+		for (disciplina disciplina : disciplinas) {
 			somanotas += disciplina.getNota();
 		}
-		
+
 		return somanotas / disciplinas.size();
 	}
 
 	public void setMetiaNota(double metiaNota) {
-		MetiaNota = metiaNota;
+		this.MetiaNota = metiaNota;
 	}
 
 	List<disciplina> disciplinas = new ArrayList<disciplina>();
 
 	public List<disciplina> getDisciplinas() {
-			return disciplinas;
-		}
+		return disciplinas;
+	}
 
 	/* Recebe dados */
 	public void setNume(String nome) {

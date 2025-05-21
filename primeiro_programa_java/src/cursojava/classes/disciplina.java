@@ -10,6 +10,17 @@ public class disciplina {
 	double nota;
 	String disciplina;
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public double getNota() {
 		return nota;
 	}

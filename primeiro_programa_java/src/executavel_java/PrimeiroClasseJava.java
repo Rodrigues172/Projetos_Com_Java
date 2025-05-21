@@ -16,7 +16,7 @@ public class PrimeiroClasseJava {
 		aluno1.setNume("Davi");
 		aluno1.setNumeroCpf("50314842845");
 
-		for (int i = 0; i < 4; i++) {
+		for (int i = 1; i < 5; i++) {
 			String nomeDisciplina = JOptionPane.showInputDialog("Nome da Disciplina " + i + ": ");
 			String notaDisciplina = JOptionPane.showInputDialog("Qual e Valor da Nota " + i + ": ");
 			disciplina Disciplina = new disciplina();
@@ -28,14 +28,19 @@ public class PrimeiroClasseJava {
 		}
 
 		int escolha = JOptionPane.showConfirmDialog(null, "Deseja Excluir alguma disciplina?");
-		
-		if (escolha == 0) {
-			String disciplinaRemover = JOptionPane.showInputDialog("Qual a Disciplina 1, 2, 3, ou 4?");
-			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
-		} else {
 
+		if (escolha == 0) {
+			
+			int continuarRemover = 0;
+			
+			while (continuarRemover == 0) {
+				String disciplinaRemover = JOptionPane.showInputDialog("Qual a Disciplina 1, 2, 3, ou 4?");
+				aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
+				continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a Remover a Materia?");
+			}
 		}
 		
+		System.out.println(aluno1.getDisciplinas1());
 		System.out.println(aluno1.getMetiaNota());
 
 	}

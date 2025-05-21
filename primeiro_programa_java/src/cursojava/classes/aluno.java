@@ -1,3 +1,8 @@
+/* SET e para adicionar ou receber dados para os atributos se fosse grava o
+valor na quela variavelel
+GET e para resgatar ou obter o valor do atributo se fosse ver o valor com return
+essas variaveis ou na classe como poo se chama de atributos*/
+
 package cursojava.classes;
 
 import java.util.ArrayList;
@@ -5,12 +10,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class aluno {
-	/*
-	 * SET e para adicionar ou receber dados para os atributos se fosse grava o
-	 * valor na quela variavelel
-	 */
-	/* GET e para resgatar ou obter o valor do atributo se fosse ver o valor */
-	/* essas variaveis ou na classe como poo se chama de atributos */
+
 	String nome;
 	int idade;
 	String dataNascimento;
@@ -23,6 +23,10 @@ public class aluno {
 	String serieMatriculado;
 	double MetiaNota;
 
+	
+	
+	
+	
 	public String getDisciplinas1() {
 
 		for (disciplina disciplina : disciplinas) {
@@ -52,6 +56,23 @@ public class aluno {
 		return disciplinas;
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/* Recebe dados */
 	public void setNume(String nome) {
 		this.nome = nome;

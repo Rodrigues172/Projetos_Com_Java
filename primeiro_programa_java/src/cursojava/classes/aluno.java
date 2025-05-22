@@ -9,31 +9,27 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class aluno {
+public class aluno extends Pessoa {
 
-	String nome;
-	int idade;
-	String dataNascimento;
-	String registroGeral;
-	String numeroCpf;
-	String nomeMae;
-	String nomePai;
 	String dataMatricula;
 	String nomeEscola;
 	String serieMatriculado;
 	double MetiaNota;
 
 	
-	
+	disciplina disciplina1 = new disciplina();
 	
 	
 	public String getDisciplinas1() {
+	    StringBuilder resultado = new StringBuilder();
 
-		for (disciplina disciplina : disciplinas) {
-			System.out.println(disciplina.getDisciplina);
-		}
-	  return
+	    for (disciplina disciplina1 : disciplinas) {
+	        resultado.append(disciplina1.getDisciplina()).append("\n");
+	    }
+
+	    return resultado.toString();
 	}
+
 
 	public double getMetiaNota() {
 
@@ -56,22 +52,6 @@ public class aluno {
 		return disciplinas;
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	/* Recebe dados */
 	public void setNume(String nome) {

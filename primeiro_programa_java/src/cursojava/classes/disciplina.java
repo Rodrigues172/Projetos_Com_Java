@@ -9,18 +9,8 @@ public class disciplina {
 	/*Essa classe Disciplina servira para todos os objetos de notas e materias */
 	double nota;
 	String disciplina;
+	
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	public double getNota() {
 		return nota;
 	}

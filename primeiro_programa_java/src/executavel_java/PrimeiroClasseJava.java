@@ -15,8 +15,9 @@ public class PrimeiroClasseJava {
 		aluno aluno1 = new aluno();
 		aluno1.setNume("Davi");
 		aluno1.setNumeroCpf("50314842845");
+		
 
-		for (int i = 1; i < 2; i++) {
+		for (int i = 1; i < 5; i++) {
 			String nomeDisciplina = JOptionPane.showInputDialog("Nome da Disciplina " + i + ": ");
 			String notaDisciplina = JOptionPane.showInputDialog("Qual e Valor da Nota " + i + ": ");
 			disciplina Disciplina = new disciplina();
@@ -32,10 +33,12 @@ public class PrimeiroClasseJava {
 		if (escolha == 0) {
 
 			int continuarRemover = 0;
+			int posicao = 1; 
 
 			while (continuarRemover == 0) {
 				String disciplinaRemover = JOptionPane.showInputDialog("Qual a Disciplina 1, 2, 3, ou 4?");
-				aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
+				aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - posicao);
+				posicao ++;
 				continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a Remover a Materia?");
 			}
 		}

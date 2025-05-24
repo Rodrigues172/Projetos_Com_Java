@@ -3,7 +3,7 @@ package cursojava.classes;
 import java.util.Objects;
 import java.util.concurrent.ForkJoinPool;
 
-public class disciplina {
+public class Disciplina {
 
 	
 	/*Essa classe Disciplina servira para todos os objetos de notas e materias */
@@ -40,7 +40,7 @@ public class disciplina {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		disciplina other = (disciplina) obj;
+		Disciplina other = (Disciplina) obj;
 		return Objects.equals(disciplina, other.disciplina)
 				&& Double.doubleToLongBits(nota) == Double.doubleToLongBits(other.nota);
 	}

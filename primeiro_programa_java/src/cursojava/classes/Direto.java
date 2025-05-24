@@ -2,15 +2,15 @@ package cursojava.classes;
 
 public class Direto extends Pessoa{
 	
-	int registroGeral;
+	String registroGeral;
 	int tempoDirecao;
 	String titulocao;
 	
 	
-	public int getRegistroGeral() {
+	public String getRegistroGeral() {
 		return registroGeral;
 	}
-	public void setRegistroGeral(int registroGeral) {
+	public void setRegistroGeral(String registroGeral) {
 		this.registroGeral = registroGeral;
 	}
 	public int getTempoDirecao() {

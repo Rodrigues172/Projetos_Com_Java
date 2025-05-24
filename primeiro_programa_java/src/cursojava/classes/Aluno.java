@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class aluno extends Pessoa {
+public class Aluno extends Pessoa {
 
 	String dataMatricula;
 	String nomeEscola;
@@ -17,13 +17,13 @@ public class aluno extends Pessoa {
 	double MetiaNota;
 
 	
-	disciplina disciplina1 = new disciplina();
+	Disciplina disciplina1 = new Disciplina();
 	
 	
 	public String getDisciplinas1() {
 	    StringBuilder resultado = new StringBuilder();
 
-	    for (disciplina disciplina1 : disciplinas) {
+	    for (Disciplina disciplina1 : disciplinas) {
 	        resultado.append(disciplina1.getDisciplina()).append("\n");
 	    }
 
@@ -35,7 +35,7 @@ public class aluno extends Pessoa {
 
 		double somanotas = 0.0;
 
-		for (disciplina disciplina : disciplinas) {
+		for (Disciplina disciplina : disciplinas) {
 			somanotas += disciplina.getNota();
 		}
 
@@ -46,9 +46,9 @@ public class aluno extends Pessoa {
 		this.MetiaNota = metiaNota;
 	}
 
-	List<disciplina> disciplinas = new ArrayList<disciplina>();
+	List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 
-	public List<disciplina> getDisciplinas() {
+	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}
 
@@ -152,7 +152,7 @@ public class aluno extends Pessoa {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		aluno other = (aluno) obj;
+		Aluno other = (Aluno) obj;
 		return Objects.equals(nome, other.nome) && Objects.equals(numeroCpf, other.numeroCpf);
 	}
 

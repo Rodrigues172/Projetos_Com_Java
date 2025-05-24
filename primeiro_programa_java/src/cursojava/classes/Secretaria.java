@@ -1,6 +1,5 @@
 package cursojava.classes;
 
-import cursojava.classesauxiliares.Funcaoautenticacao;
 import cursojava.interfaces.PermitirAcasso;
 
 public class Secretaria extends Pessoa implements PermitirAcasso {
@@ -10,11 +9,6 @@ public class Secretaria extends Pessoa implements PermitirAcasso {
 	String experiencia;
 	String senha;
 	String login;
-
-	public Secretaria(String login, String senha) {
-		this.login = login;
-		this.senha = senha;
-	}
 
 	public Secretaria() {
 	}

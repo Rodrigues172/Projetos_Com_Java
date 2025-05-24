@@ -7,7 +7,6 @@ import javax.swing.JOptionPane;
 import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
 import cursojava.classes.Secretaria;
-import cursojava.classesauxiliares.Funcaoautenticacao;
 import cursojava.interfaces.PermitirAcasso;
 
 public class PrimeiroClasseJava {
@@ -17,7 +16,9 @@ public class PrimeiroClasseJava {
 		String login = JOptionPane.showInputDialog("informe o login");
 		String senha = JOptionPane.showInputDialog("informe o senha");
 
-		if (new Funcaoautenticacao(new Secretaria(login, senha)).autenticar( )) {
+		Secretaria secretaria = new Secretaria();
+		
+		if (secretaria.autenticar(login, senha)) {
 
 			Aluno carinha = new Aluno();
 			carinha.setNome("Davi Rodrigues");
@@ -53,9 +54,9 @@ public class PrimeiroClasseJava {
 			System.out.println(carinha.getMetiaNota());
 
 		} else {
-
+			
 			JOptionPane.showInternalMessageDialog(null, "acesso negado");
-
+			
 		}
 
 	}

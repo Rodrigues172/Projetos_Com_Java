@@ -16,27 +16,24 @@ public class Aluno extends Pessoa {
 	String serieMatriculado;
 	double MetiaNota;
 
-	
 	Disciplina disciplina1 = new Disciplina();
-	
-	
+
 	public String getDisciplinas1() {
-	    StringBuilder resultado = new StringBuilder();
+		StringBuilder resultado = new StringBuilder();
 
-	    for (Disciplina disciplina1 : disciplinas) {
-	        resultado.append(disciplina1.getDisciplina()).append("\n");
-	    }
+		for (Disciplina disciplina1 : disciplinas) {
+			resultado.append(disciplina1.getDisciplina()).append("\n");
+		}
 
-	    return resultado.toString();
+		return resultado.toString();
 	}
-
 
 	public double getMetiaNota() {
 
 		double somanotas = 0.0;
 
 		for (Disciplina disciplina : disciplinas) {
-			somanotas += disciplina.getNota();
+			somanotas += disciplina.getMediaNota();
 		}
 
 		return somanotas / disciplinas.size();
@@ -52,7 +49,6 @@ public class Aluno extends Pessoa {
 		return disciplinas;
 	}
 
-	
 	/* Recebe dados */
 	public void setNume(String nome) {
 		this.nome = nome;

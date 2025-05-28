@@ -1,21 +1,20 @@
 package cursojava.classes;
 
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.concurrent.ForkJoinPool;
 
 public class Disciplina {
 
-	
-	/*Essa classe Disciplina servira para todos os objetos de notas e materias */
-	double nota;
+	/* Essa classe Disciplina servira para todos os objetos de notas e materias */
+	private double[] nota = new double[4];
 	String disciplina;
-	
 
-	public double getNota() {
+	public double[] getNota() {
 		return nota;
 	}
 
-	public void setNota(double nota) {
+	public void setNota(double[] nota) {
 		this.nota = nota;
 	}
 
@@ -27,9 +26,22 @@ public class Disciplina {
 		this.disciplina = disciplina;
 	}
 
+	public double getMediaNota() {
+		double somaTotal = 0;
+		for (int i = 0; i < nota.length; i++) {
+			somaTotal += nota[i];
+		}
+
+		return somaTotal / 4;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(disciplina, nota);
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(nota);
+		result = prime * result + Objects.hash(disciplina);
+		return result;
 	}
 
 	@Override
@@ -41,33 +53,7 @@ public class Disciplina {
 		if (getClass() != obj.getClass())
 			return false;
 		Disciplina other = (Disciplina) obj;
-		return Objects.equals(disciplina, other.disciplina)
-				&& Double.doubleToLongBits(nota) == Double.doubleToLongBits(other.nota);
+		return Objects.equals(disciplina, other.disciplina) && Arrays.equals(nota, other.nota);
 	}
 
-	@Override
-	public String toString() {
-		return "disciplina [nota=" + nota + ", disciplina=" + disciplina + "]";
-	}
-
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

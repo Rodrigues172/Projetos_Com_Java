@@ -1,4 +1,4 @@
-package cursojava.executavel;
+package cursojava.mainexecutavel;
 
 import java.util.ArrayList;
 import java.util.List;

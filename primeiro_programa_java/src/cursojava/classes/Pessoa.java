@@ -9,8 +9,6 @@ public class Pessoa {
 	protected String numeroCpf;
 	protected String nomeMae;
 	protected String nomePai;
-	
-	
 	public String getNome() {
 		return nome;
 	}
@@ -41,8 +39,18 @@ public class Pessoa {
 	public void setNumeroCpf(String numeroCpf) {
 		this.numeroCpf = numeroCpf;
 	}
-	
-	
-	
+	public String getNomeMae() {
+		return nomeMae;
+	}
+	public void setNomeMae(String nomeMae) {
+		this.nomeMae = nomeMae;
+	}
+	public String getNomePai() {
+		return nomePai;
+	}
+	public void setNomePai(String nomePai) {
+		this.nomePai = nomePai;
+	}
+
 	
 }
